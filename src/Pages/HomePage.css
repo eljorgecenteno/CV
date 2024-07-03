@@ -1,0 +1,274 @@
+#jorge-main-image{
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.title-homepage{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#head-homepage{
+    background: linear-gradient(to bottom right, #075ccc ,#7c9aff);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+#head-homepage h1{
+    font-size: 60px;
+}
+
+#head-homepage h4{
+    font-size: 30px;
+    margin: 6% 5% 0 6%; /* Esto es lo mismo que margin-top: 6%; margin-right: 5%; */
+    text-align: center; /* Asegura que el texto dentro del h4 esté centrado */
+}
+
+#head-text-homepage{
+    align-items: center;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#h4-homepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+}
+.icons-homepage{
+    width: 60px;
+    height: 60px;
+    margin-right: 60px;
+    margin-top: 50px;
+}
+#icons-homepage-container{
+    display: flex;
+    justify-content: space-around;
+}
+#email-icon-homepage{
+    border-radius: 30px;
+}
+#about-me-homepage{
+    background-color: #fdf5ec;
+}
+#about-me-title-home-page{
+    padding-top: 50px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#about-me-text-home-page{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 25px;
+    padding-bottom: 40px;
+}
+#projects-container-homepage{
+    background: linear-gradient(to bottom right, #075ccc ,#7c9aff);
+color: white;
+padding-bottom: 80px;
+}
+#Projects-homePage{
+    padding-top: 50px;
+}
+
+#proyects-boxes-container{
+    display: flex;
+    justify-content: space-around;
+}
+.each-box{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    height: 350px;
+    padding: 15px;
+    margin-top: 4%;
+    border-radius: 30px;
+    margin-bottom: 60px;
+}
+.each-box h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    margin-bottom: 15px;
+    
+}
+.each-box img{
+    border: 1px solid #010002;
+    border-radius: 10px;
+    width: 20vw;
+    height: 170px;
+}
+
+.each-box p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+.each-box button{
+    width: 95%;
+height: 40px;
+background-color: white;
+border: 2px solid #c831f7;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+border-radius: 20px;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.each-box button:hover{
+    background-color: #c831f7 ;
+    border: 2px solid #c831f7;
+    color: white;
+}
+#personal-web-homepage{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: white;
+    color: #010002;
+    width: 45%;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+   align-items: center;
+   text-align: center;
+}
+.eachStudy{
+    display: flex;
+    border-bottom: 2px solid #c831f7;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.eachStudy p{
+    margin-bottom: 10px;
+}
+#studies-box{
+    background-color: #fdf5ec;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+}
+#studies-box h1{
+padding-top: 50px;
+margin-bottom: 30px;
+}
+#studies-box h2{
+    margin-bottom: 20px;
+   margin-top: 20px;
+    margin-left: 20px;
+    font-size: 35px;
+    display: block;
+}
+#studies-box p{
+    margin-left: 20px;
+    font-size: 20px;
+}
+#ironhack-certificate{
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#final-thesis{
+    width: 400px;
+}
+#first-study{
+    display: flex;
+    border-top: 2px solid #c831f7;
+}
+#last-study{
+    margin-bottom: 40px;
+}
+#work-experience-container{
+    background: linear-gradient(to bottom right, #075ccc ,#7c9aff);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 40px;
+
+}
+#work-experience-container h1{
+    padding-top: 50px;
+    margin-bottom: 30px;
+    }
+#work-experience-container h2{
+        margin-bottom: 20px;
+       margin-top: 20px;
+        margin-left: 20px;
+        font-size: 35px;
+        display: block;
+    }
+
+    #work-experience-container p{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    .eachYear{
+        display: flex;
+        border-bottom: 2px solid #ffffff;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-right: 40px;
+     
+    }
+    .each-info-work{
+        padding-bottom: 20px;
+    }
+    #languages-homepage-box{
+        background-color: #fdf5ec; ;
+    }
+    #languages-homepage{
+        padding-top: 40px;
+    }
+    #each-language-box{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .each-language {
+        background-color: white;
+        border: 1px solid #c831f7;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar contenido verticalmente */
+        width: 23%;
+        height: 100px;
+        padding: 15px;
+        margin-top: 4%;
+        border-radius: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .each-language h3 {
+        font-size: 28px;
+    }
+    
+    .each-language p {
+        font-size: 18px;
+        margin-top: 5px;
+        text-align: center; /* Alinear texto al centro */
+    }
+    
