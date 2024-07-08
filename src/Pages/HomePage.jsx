@@ -76,12 +76,12 @@ function HomePage() {
         </h1>
         <p id="about-me-text-home-page">
           Originally from Sevilla, Spain, and currently based in Berlin,
-          Germany, I consider myself a eclectic and versatile person. My range
+          Germany, I consider myself an eclectic and versatile person. My range
           of interests is very broad, spanning from programming to music, sport,
           science and philosophy. This curiosity and hunger for knowledge has
-          lead me to live in different cityes and countries around europe (UK,
+          led me to live in different cities and countries around Europe (UK,
           Malta, Germany) allowing me to learn and perfect different language
-          skills, aswell to envolve myself into a more open person, getting used
+          skills, as well to envolve myself into a more open minded person, getting used
           to work and live in multicultural enviroments.
           <br></br>
           <br></br>
@@ -141,7 +141,7 @@ function HomePage() {
         </h1>
         <div id="proyects-boxes-container">
           <div className="each-box">
-            <h3>Dog wascher</h3>
+            <h3>Dog washer</h3>
             <img className="project-image" src={DogWascher1} alt="" />
             <p>Vanilla JS, CSS, HTML, DOM manipulation.</p>
             <button onClick={handleButtonClick}>See more</button>
@@ -590,7 +590,7 @@ function HomePage() {
               I have worked in various hospitality roles across Germany,
               primarily focusing on customer service. This experience has
               equipped me with a strong understanding of how to meet customer
-              needs and requirements effectively, aswell as improved my german language skills.
+              needs and requirements effectively, as well as improved my german language skills.
             </p>
           )}
         </div></div> } 
