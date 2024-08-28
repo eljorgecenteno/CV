@@ -11,7 +11,7 @@ function ThemeContextWrapper (props){
       });
      
     console.log(windowSize)
-    const [language, setLanguage] =useState("english")
+    const [language, setLanguage] =useState("spanish")
 return (
     <themeContext.Provider value={{language: language, setLanguage:setLanguage, screenWidth: windowSize.width}}>
         {props.children}
