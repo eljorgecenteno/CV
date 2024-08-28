@@ -126,7 +126,7 @@ to create accounts and interact with the whole app and with other users. It has 
     </div>
     <div id="links-project-page">
       <Link style={{ textDecoration: 'none', color: "black"}} to="/">◂ Volver a la página de inicio</Link>
-      <Link style={{ textDecoration: 'none', color: "black"}} to="/dog-washer">Ver otro proyecto ▸</Link>
+      <Link id="check-other-project" style={{ textDecoration: 'none', color: "black"}} to="/dog-washer">Ver otro proyecto ▸</Link>
     </div>
   </div>
 </div>}

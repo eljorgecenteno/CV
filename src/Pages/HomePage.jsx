@@ -17,7 +17,7 @@ import { themeContext } from '../Context/Context';
 function HomePage() {
   const navigate = useNavigate();
   const [studies, setStudies] = useState(0);
-  const {language} = useContext(themeContext)
+  const {language, screenWidth} = useContext(themeContext)
   const handleButtonClick = () => {
     navigate("/dog-washer");
   };
@@ -30,10 +30,49 @@ function HomePage() {
   return (
     <div id="main-box">
       <Navbar></Navbar>
-      <div id="head-homepage">
+      {screenWidth > 900 && <> <div id="head-homepage">
+        
         <img src={JorgeImage} alt="Jorge" id="jorge-main-image" />
         <div id="head-text-homepage">
           <h1>Jorge Centeno Mesa</h1>
+          <div id="h4-homepage">
+            {language === "english" && <h4>
+              Full Stack web developer & Cloud Practisioner
+            </h4> }
+            {language === "german" && <h4>
+              Full-Stack-Webentwickler & Cloud Pactisioner
+            </h4> }
+            {language === "spanish" && <h4>
+              Desarrollador Full-Stack & Cloud Practisioner
+            </h4> }
+          </div>
+          <div id="icons-homepage-container">
+            <a href="mailto:eljorgecenteno@gmail.com">
+              <img
+                className="icons-homepage"
+                id="email-icon-homepage"
+                src={email}
+                alt="icon email"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/jorge-centeno-mesa-4b8868183/">
+              <img
+                className="icons-homepage"
+                src={linkedin}
+                alt="icon linkedin"
+              />
+            </a>
+            <a href="https://github.com/eljorgecenteno/">
+              <img className="icons-homepage" src={github} alt="icon github" />
+            </a>
+          </div>
+        </div>
+      </div></>}
+      {screenWidth < 900 && <> <div id="head-homepage">
+        <h1>Jorge Centeno Mesa</h1>
+        <img src={JorgeImage} alt="Jorge" id="jorge-main-image" />
+        <div id="head-text-homepage">
+          
           <div id="h4-homepage">
             {language === "english" && <h4>
               Full Stack web developer with university background in health
@@ -68,7 +107,8 @@ function HomePage() {
             </a>
           </div>
         </div>
-      </div>
+      </div></>}
+     
 
       <div id="about-me-homepage">
         {language === "english" && <div><h1 className="title-homepage" id="about-me-title-home-page">
@@ -241,24 +281,44 @@ function HomePage() {
           Studies
         </h1>
         <div className="eachStudy">
+        <div  onClick={() => (studies === 4 ? setStudies(0) : setStudies(4))}>
+          {studies === 4 ? <h2>University Master's Degree in Web Site and Application Development ▾</h2> : <h2>University Master's Degree in Web Site and Application Development ▸</h2>}
+          </div>
+          {studies === 4 && (
+            <div>
+              {" "}
+              <p>
+              Official two-year master's degree in backend and frontend web development imparted part time and on online modality by  UOC (UNIVERSITAT OPERTA DE CATALUNYA)
+              </p>
+            </div>
+          )}</div>
+          <div className="eachStudy">
+           <div onClick={() => (studies === 5 ? setStudies(0) : setStudies(5))}>
+          {studies === 5 ? <h2>AWS Cloud Practitioner Esentials  ▾</h2> : <h2>AWS Cloud Practitioner Esentials  ▸</h2>}
+          </div>
+          {studies === 5 && (
+            <div>
+              {" "}
+              <p>
+              The AWS Certified Cloud Practitioner (CLF-C02) course teach technical expertise to explain the value of AWS and understand the AWS shared responsibility model, security best practices, AWS costs, economics, and billing practices.
+              </p>
+            </div>
+          )}</div>
+          <div className="eachStudy">
           <div
-            id="first-study"
+          
+            
             onClick={() => (studies === 1 ? setStudies(0) : setStudies(1))}
           >
             {studies === 1 ? (
-              <h2>Software developer formation▾</h2>
+              <h2>Ironhack Full stack web development Bootcamp▾</h2>
             ) : (
-              <h2>Software developer formation ▸</h2>
+              <h2>Ironhack Full stack web development Bootcamp ▸</h2>
             )}
           </div>
           {studies === 1 && (
             <div>
-              <p>
-                Always eager to learn independently, I developed my foundational
-                knowledge of JavaScript, CSS, and HTML from 2019 to 2023 by
-                completing courses offered on platforms like FreeCodeCamp and
-                Codecademy.
-              </p>
+              
               <p>
                 At the end of 2023, I decided to focus my career on software
                 development and joined the six-month bootcamp offered by
@@ -276,25 +336,41 @@ function HomePage() {
                 alt="Ironhack Certificate"
               />
 
+             
+            </div>
+          )}</div>
+        
+        
+        <div id="last-study" className="eachStudy">
+          <div onClick={() => (studies === 3 ? setStudies(0) : setStudies(3))}>
+            {studies === 3 ? <h2>Others ▾</h2> : <h2>Others ▸</h2>}
+          </div>
+          {studies === 3 && (
+            <div>
+              {" "}
+              <p>
+                Always eager to learn independently, I developed my foundational
+                knowledge of JavaScript, CSS, and HTML from 2019 to 2023 by
+                completing courses offered on platforms like FreeCodeCamp and
+                Codecademy.
+              </p>
+              <p>
+                Completed high school in Spain with a specialization in social
+                sciences, equivalent to the Abitur in Germany.
+              </p>
+              <p>
+                Upon arriving in Germany, I completed the Integration Course
+                offered by the German government. This course ensures a B1 level
+                in the German language and includes information about German
+                society, including laws, history, and geography.
+              </p>
               <p>
                 Currently, I continue to learn and deepen my understanding of
                 various technologies, primarily based on the MERN stack. I am
                 also open to work opportunities that align with my skills and
                 expectations.
               </p>
-            </div>
-          )}
-        </div>
-        <div className="eachStudy">
-          <div onClick={() => (studies === 2 ? setStudies(0) : setStudies(2))}>
-            {studies === 2 ? (
-              <h2>University studies▾</h2>
-            ) : (
-              <h2>University studies ▸</h2>
-            )}
-          </div>
-          {studies === 2 && (
-            <div>
+              <div>
               <p>
                 I successfully completed my studies in Sports Science at Cadiz
                 University (Spain) between 2017 and 2021, with a focus on
@@ -316,49 +392,50 @@ function HomePage() {
                 </figcaption>
               </figure>
             </div>
-          )}
-        </div>
-        <div id="last-study" className="eachStudy">
-          <div onClick={() => (studies === 3 ? setStudies(0) : setStudies(3))}>
-            {studies === 3 ? <h2>Others ▾</h2> : <h2>Others ▸</h2>}
-          </div>
-          {studies === 3 && (
-            <div>
-              {" "}
-              <p>
-                Completed high school in Spain with a specialization in social
-                sciences, equivalent to the Abitur in Germany.
-              </p>
-              <p>
-                Upon arriving in Germany, I completed the Integration Course
-                offered by the German government. This course ensures a B1 level
-                in the German language and includes information about German
-                society, including laws, history, and geography.
-              </p>
             </div>
           )}
+          <div></div>
+         
         </div></div>} 
         {language === "german" && <div><h1 className="title-homepage" id="studies-homePage">
           Studien
         </h1>
         <div className="eachStudy">
+        <div  onClick={() => (studies === 4 ? setStudies(0) : setStudies(4))}>
+          {studies === 4 ? <h2>University Master's Degree in Web Site and Application Development ▾</h2> : <h2>University Master's Degree in Web Site and Application Development ▸</h2>}
+          </div>
+          {studies === 4 && (
+            <div>
+              {" "}
+              <p>
+              Offizieller zweijähriger Masterstudiengang in Backend- und Frontend-Webentwicklung, der in Teilzeit und online von der UOC (UNIVERSITAT OPERTA DE CATALUNYA)             </p>
+            </div>
+          )}</div>
+          <div className="eachStudy">
+           <div onClick={() => (studies === 5 ? setStudies(0) : setStudies(5))}>
+          {studies === 5 ? <h2>AWS Cloud Practitioner Esentials  ▾</h2> : <h2>AWS Cloud Practitioner Esentials  ▸</h2>}
+          </div>
+          {studies === 5 && (
+            <div>
+              {" "}
+              <p>
+              Der Kurs AWS Certified Cloud Practitioner (CLF-C02) vermittelt technisches Fachwissen, um den Wert von AWS zu erklären und das AWS-Modell der geteilten Verantwortung, bewährte Sicherheitspraktiken, AWS-Kosten, Wirtschaftlichkeit und Abrechnungspraktiken zu verstehen.              </p>
+            </div>
+          )}</div>
+        <div className="eachStudy">
           <div
-            id="first-study"
+           
             onClick={() => (studies === 1 ? setStudies(0) : setStudies(1))}
           >
             {studies === 1 ? (
-              <h2>Ausbildung zum Softwareentwickler▾</h2>
+              <h2>Ironhack Full-Stack developer Bootcamp▾</h2>
             ) : (
-              <h2>Ausbildung zum Softwareentwickler ▸</h2>
+              <h2>Ironhack Full-Stack developer Bootcamp ▸</h2>
             )}
           </div>
           {studies === 1 && (
             <div>
-              <p>
-                Immer lernbegierig und selbstständig, habe ich von 2019 bis 2023
-                meine Grundkenntnisse in JavaScript, CSS und HTML durch
-                Kurse auf Plattformen wie FreeCodeCamp und Codecademy erworben.
-              </p>
+              
               <p>
                 Ende 2023 entschied ich mich, meine Karriere auf Softwareentwicklung
                 zu konzentrieren, und nahm am sechsmonatigen Bootcamp von Ironhack
@@ -376,25 +453,41 @@ function HomePage() {
                 alt="Ironhack-Zertifikat"
               />
 
+              
+            </div>
+          )}
+        </div>
+       
+        <div id="last-study" className="eachStudy">
+          <div onClick={() => (studies === 3 ? setStudies(0) : setStudies(3))}>
+            {studies === 3 ? <h2>Sonstiges ▾</h2> : <h2>Sonstiges ▸</h2>}
+          </div>
+          {studies === 3 && (
+            <div>
+              {" "}
+              <p>
+                Immer lernbegierig und selbstständig, habe ich von 2019 bis 2023
+                meine Grundkenntnisse in JavaScript, CSS und HTML durch
+                Kurse auf Plattformen wie FreeCodeCamp und Codecademy erworben.
+              </p>
+              <p>
+                Abitur in Spanien mit Schwerpunkt Sozialwissenschaften, 
+                das dem deutschen Abitur entspricht, abgeschlossen.
+              </p>
+              <p>
+                Nach meiner Ankunft in Deutschland habe ich den
+                Integrationskurs der deutschen Regierung absolviert. Dieser
+                Kurs gewährleistet ein B1-Niveau in der deutschen Sprache und
+                beinhaltet Informationen über die deutsche Gesellschaft,
+                einschließlich Gesetze, Geschichte und Geografie.
+              </p>
               <p>
                 Derzeit lerne ich weiter und vertiefe mein Verständnis für
                 verschiedene Technologien, hauptsächlich basierend auf dem MERN-Stack.
                 Ich bin auch offen für Arbeitsmöglichkeiten, die meinen Fähigkeiten
                 und Erwartungen entsprechen.
               </p>
-            </div>
-          )}
-        </div>
-        <div className="eachStudy">
-          <div onClick={() => (studies === 2 ? setStudies(0) : setStudies(2))}>
-            {studies === 2 ? (
-              <h2>Universitätsstudien▾</h2>
-            ) : (
-              <h2>Universitätsstudien ▸</h2>
-            )}
-          </div>
-          {studies === 2 && (
-            <div>
+              <div>
               <p>
                 Ich habe erfolgreich mein Studium der Sportwissenschaften an der
                 Universität Cádiz (Spanien) von 2017 bis 2021 abgeschlossen,
@@ -417,26 +510,6 @@ function HomePage() {
                 </figcaption>
               </figure>
             </div>
-          )}
-        </div>
-        <div id="last-study" className="eachStudy">
-          <div onClick={() => (studies === 3 ? setStudies(0) : setStudies(3))}>
-            {studies === 3 ? <h2>Sonstiges ▾</h2> : <h2>Sonstiges ▸</h2>}
-          </div>
-          {studies === 3 && (
-            <div>
-              {" "}
-              <p>
-                Abitur in Spanien mit Schwerpunkt Sozialwissenschaften, 
-                das dem deutschen Abitur entspricht, abgeschlossen.
-              </p>
-              <p>
-                Nach meiner Ankunft in Deutschland habe ich den
-                Integrationskurs der deutschen Regierung absolviert. Dieser
-                Kurs gewährleistet ein B1-Niveau in der deutschen Sprache und
-                beinhaltet Informationen über die deutsche Gesellschaft,
-                einschließlich Gesetze, Geschichte und Geografie.
-              </p>
             </div>
           )}
         </div></div>}
@@ -445,21 +518,41 @@ function HomePage() {
           Estudios
         </h1>
         <div className="eachStudy">
+        <div  onClick={() => (studies === 4 ? setStudies(0) : setStudies(4))}>
+          {studies === 4 ? <h2>Master universitario en diseño y desarrollo web ▾</h2> : <h2>Mater universitario en diseño y desarrollo web ▸</h2>}
+          </div>
+          {studies === 4 && (
+            <div>
+              {" "}
+              <p>
+              Máster oficial de dos años en desarrollo web backend y frontend impartido a tiempo parcial y en modalidad online por la UOC (UNIVERSITAT OPERTA DE CATALUNYA)              </p>
+            </div>
+          )}</div>
+          <div className="eachStudy">
+           <div onClick={() => (studies === 5 ? setStudies(0) : setStudies(5))}>
+          {studies === 5 ? <h2>AWS Cloud Practitioner Esentials  ▾</h2> : <h2>AWS Cloud Practitioner Esentials  ▸</h2>}
+          </div>
+          {studies === 5 && (
+            <div>
+              {" "}
+              <p>
+              El curso AWS Certified Cloud Practitioner (CLF-C02) enseña conocimientos técnicos para explicar el valor de AWS y comprender el modelo de responsabilidad compartida de AWS, las mejores prácticas de seguridad, los costes de AWS, la economía y las prácticas de facturación.           </p>
+            </div>
+          )}</div>
+        <div className="eachStudy">
           <div
-            id="first-study"
+            
             onClick={() => (studies === 1 ? setStudies(0) : setStudies(1))}
           >
             {studies === 1 ? (
-              <h2>Formación como desarrollador de software▾</h2>
+              <h2>Web development bootcamp▾</h2>
             ) : (
-              <h2>Formación como desarrollador de software ▸</h2>
+              <h2>Web development bootcamp ▸</h2>
             )}
           </div>
           {studies === 1 && (
             <div>
-              <p>
-                Siempre ansioso por aprender de forma independiente, desarrollé mis conocimientos fundamentales de JavaScript, CSS y HTML desde 2019 hasta 2023 completando cursos ofrecidos en plataformas como FreeCodeCamp y Codecademy.
-              </p>
+             
               <p>
                 A finales de 2023, decidí enfocar mi carrera en el desarrollo de software y me uní al bootcamp de seis meses ofrecido por Ironhack. Este bootcamp en línea cubría todo el proceso de desarrollo de aplicaciones, desde el frontend hasta el backend, utilizando el stack MERN. Durante este tiempo, creé mis primeros proyectos. En mayo de 2024, completé con éxito el bootcamp, desarrollando una aplicación full-stack llamada FRIENDS. Recibí mi certificado de Ironhack al finalizar.
               </p>
@@ -470,22 +563,32 @@ function HomePage() {
                 alt="Certificado de Ironhack"
               />
 
-              <p>
-                Actualmente, sigo aprendiendo y profundizando mi comprensión de varias tecnologías, principalmente basadas en el stack MERN. También estoy abierto a oportunidades laborales que se alineen con mis habilidades y expectativas.
-              </p>
+             
             </div>
           )}
         </div>
-        <div className="eachStudy">
-          <div onClick={() => (studies === 2 ? setStudies(0) : setStudies(2))}>
-            {studies === 2 ? (
-              <h2>Estudios universitarios▾</h2>
-            ) : (
-              <h2>Estudios universitarios ▸</h2>
-            )}
+        
+        <div id="last-study" className="eachStudy">
+          <div onClick={() => (studies === 3 ? setStudies(0) : setStudies(3))}>
+            {studies === 3 ? <h2>Otros ▾</h2> : <h2>Otros ▸</h2>}
           </div>
-          {studies === 2 && (
+          {studies === 3 && (
             <div>
+              {" "}
+              <p>
+                Siempre ansioso por aprender de forma independiente, desarrollé mis conocimientos fundamentales de JavaScript, CSS y HTML desde 2019 hasta 2023 completando cursos ofrecidos en plataformas como FreeCodeCamp y Codecademy.
+              </p>
+              <p>
+                Completé la educación secundaria en España con una especialización en ciencias sociales, equivalente al Abitur en Alemania.
+              </p>
+              <p>
+                Al llegar a Alemania, completé el Curso de Integración ofrecido por el gobierno alemán. Este curso asegura un nivel B1 en el idioma alemán e incluye información sobre la sociedad alemana, incluyendo leyes, historia y geografía.
+              </p>
+
+              <p>
+                Actualmente, sigo aprendiendo y profundizando mi comprensión de varias tecnologías, principalmente basadas en el stack MERN. También estoy abierto a oportunidades laborales que se alineen con mis habilidades y expectativas.
+              </p>
+              <div>
               <p>
                 Completé con éxito mis estudios en Ciencias del Deporte en la Universidad de Cádiz (España) entre 2017 y 2021, con un enfoque en actividad física y salud. Mi tesis de grado fue una revisión de la evidencia científica actual sobre la actividad física en personas con artrosis, comparando los beneficios del ejercicio dentro y fuera del agua.
               </p>
@@ -502,22 +605,8 @@ function HomePage() {
                 </figcaption>
               </figure>
             </div>
-          )}
-        </div>
-        <div id="last-study" className="eachStudy">
-          <div onClick={() => (studies === 3 ? setStudies(0) : setStudies(3))}>
-            {studies === 3 ? <h2>Otros ▾</h2> : <h2>Otros ▸</h2>}
-          </div>
-          {studies === 3 && (
-            <div>
-              {" "}
-              <p>
-                Completé la educación secundaria en España con una especialización en ciencias sociales, equivalente al Abitur en Alemania.
-              </p>
-              <p>
-                Al llegar a Alemania, completé el Curso de Integración ofrecido por el gobierno alemán. Este curso asegura un nivel B1 en el idioma alemán e incluye información sobre la sociedad alemana, incluyendo leyes, historia y geografía.
-              </p>
             </div>
+            
           )}
         </div></div>}
 
