@@ -37,13 +37,13 @@ function HomePage() {
           <h1>Jorge Centeno Mesa</h1>
           <div id="h4-homepage">
             {language === "english" && <h4>
-              Full Stack web developer & Cloud Practisioner
+              Full Stack web developer & Cloud Practitioner
             </h4> }
             {language === "german" && <h4>
-              Full-Stack-Webentwickler & Cloud Pactisioner
+              Full-Stack-Webentwickler & Cloud Pactitioner
             </h4> }
             {language === "spanish" && <h4>
-              Desarrollador Full-Stack & Cloud Practisioner
+              Desarrollador Full-Stack & Cloud Practitioner
             </h4> }
           </div>
           <div id="icons-homepage-container">
