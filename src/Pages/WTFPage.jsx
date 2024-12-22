@@ -93,7 +93,7 @@ function WTFPage() {
 <div id="project-img-container">
 <img src={WTF1} alt="" />
 <img src={WTF2} alt="" />
-<img src={WTF3} alt="" />
+
 </div>
 <div id="links-project-page">
 <Link style={{ textDecoration: 'none', color: "black"}}to="/">◂Back to homepage</Link>
@@ -138,7 +138,7 @@ También existe una página oculta solo para administradores, que permite el CRU
 <div id="project-img-container">
 <img src={WTF1} alt="" />
 <img src={WTF2} alt="" />
-<img src={WTF3} alt="" />
+
 </div>
 <div id="links-project-page">
 <Link style={{ textDecoration: 'none', color: "black"}}to="/">◂Volver a la página pricipal</Link>
@@ -181,7 +181,7 @@ También existe una página oculta solo para administradores, que permite el CRU
 <div id="project-img-container">
 <img src={WTF1} alt="" />
 <img src={WTF2} alt="" />
-<img src={WTF3} alt="" />
+
 </div>
 <div id="links-project-page">
 <Link style={{ textDecoration: 'none', color: "black"}}to="/">◂Zurück zur Homepage</Link>

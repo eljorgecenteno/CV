@@ -16,7 +16,7 @@ function HomePage() {
       <ProjectNavbar></ProjectNavbar>
       {screenWidth > 900 && <>{language === "english" && <div><div id="head-homepage">
   
-  <img src={DogWascher1} alt="Jorge" id="title-main-image"/>
+  <img src={DogWascher1} alt="Jorge" id="title-main-image-WTF"/>
 <div id="head-text-homepage">
   <h1>Ultimate Dog Washer 3000</h1>
   <div id="h4-homepage"><h4>Technologies: JavaScript, HTML, CSS and DOM manipulation</h4></div>
@@ -76,7 +76,7 @@ function HomePage() {
     <li>Nutzung von Git, GitHub und Online-Bereitstellung.</li>
   </ul>
 <div id="project-img-container">
-<img src={DogWascher3} alt="" />
+
 <img src={DogWascher1} alt="" />
 <img src={DogWascher2} alt="" />
 </div>
@@ -111,7 +111,7 @@ function HomePage() {
     <li>Uso de Git, GitHub y despliegue en línea.</li>
   </ul>
 <div id="project-img-container">
-<img src={DogWascher3} alt="" />
+
 <img src={DogWascher1} alt="" />
 <img src={DogWascher2} alt="" />
 </div>
